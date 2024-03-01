@@ -2,11 +2,11 @@
 
 namespace App\Domain\News\Repositories;
 
-use App\Domain\News\Entities\News;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 interface NewsRepositoryInterface
 {
-    public function getAll(): array;
+    public function getAll(array $dataParams): LengthAwarePaginator;
 
-    public function getById(int $id): News;
+    public function getById(int $id);
 }

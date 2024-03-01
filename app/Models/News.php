@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\News\Entities;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -14,7 +14,6 @@ class News extends Model
         'description',
         'full_txt',
         'image',
-        'publish_date'
+        'publish_date',
     ];
-
 }
