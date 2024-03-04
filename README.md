@@ -32,35 +32,27 @@ cd Backend-Challenge
 ```
 composer install
 ```
-5. Install dependencies:
+5. Create the seed:
 ```
-npm install
+php artisan db:seed --class=NewsSeeder
 ```
 6. starting project:
 ```
 php artisan serve
 ```
-
-### Use postman to test the api
-
-### Access the route 
-```...```
-
-### Put it in the header
-Key:
-```Accept```
-Value:
-```application/json```
-
-### Put it on the body:
+7. Clone the repository:
 ```
-...
+git clone https://github.com/JosePedro-22/Frontend-Challenge.git
+```
+8. Navigate to the project directory:
+```
+cd Frontend-Challenge
+```
+9. starting project:
+```
+http-server
 ```
 
-### your output:
-```
-...
-```
 
 ## ⚙️ Running the tests
 
@@ -75,7 +67,7 @@ php artisan test
 To run the test, run the command
 
 ```
-php artisan test ...
+php artisan test tests/Unit/app/Domain/News/Service/NewsServiceTest.php
 ```
 
 ### 🔩 End-to-End Tests (Feature Tests):
@@ -83,7 +75,7 @@ php artisan test ...
 To run the test, run the command
 
 ```
-php artisan test ...
+php artisan test tests/Feature/app/Domain/News/Service/NewsServiceTest.php
 ```
 
 ## 🎲 The main technical decisions I made: 
@@ -91,7 +83,6 @@ php artisan test ...
 * Language and Framework: Laravel is a popular choice for developing PHP web applications due to its elegant syntax and comprehensive feature set. Furthermore, the PHP language is widely used and has a large community of developers and resources available.
 * Architecture: We chose to apply the principle of Domain-Driven Design (DDD) to organize the code into distinct layers. This helps maintain a clear separation of responsibilities and facilitates application maintenance and scalability.
 * Tests: Unit tests and end-to-end tests were implemented to ensure code quality and correct application functionality. Testing helps identify and fix problems earlier in the development cycle.
-* Data Validation: Data validation has been implemented to ensure that the data received by the API is correct and complete. This helps prevent errors and security issues.
 * API Output: Using the Eloquent's resource class allows you to expressively and easily transform your models and model collections into JSON.
 
 ## 💬 comments about the project:
@@ -102,8 +93,7 @@ A[HTTP Request] --> B[Routing Middleware]
 B --> C[Controller]
 C --> D[Service]
 D --> C
-C --> E[Resource]
-E --> F[HTTP Response]
+C --> F[HTTP Response]
 
 ```
 
@@ -111,6 +101,7 @@ E --> F[HTTP Response]
 |Name Branch     |Description                                                  |
 |----------------|-------------------------------------------------------------|
 |main            |base project|
+|feat/list-materials            |develop project|
 
 ## 🛠️ Building with
 
