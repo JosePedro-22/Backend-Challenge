@@ -18,7 +18,7 @@ class NewsFactory extends Factory
         return [
             'title' => fake()->sentence,
             'description' => fake()->text(250),
-            'full_txt' => fake()->text(256),
+            'full_txt' => fake()->text(1000),
             'image' => fake()->imageUrl(600, 600),
             'publish_date' => fake()->dateTimeThisMonth(),
         ];

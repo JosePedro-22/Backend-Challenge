@@ -20,13 +20,16 @@ class NewsService
 
     public function getAll(array $dataParams): LengthAwarePaginator
     {
-        return $this->newsRepository->getAll($dataParams);
+        $news = $this->newsRepository->getAll($dataParams);
+
+        return $news;
     }
 
     public function getById(int $id): ?News
     {
         try {
             $new = $this->newsRepository->getById($id);
+
             if (empty($new)) {
                 throw new ModelNotFoundException('Noticia não foi encontrada ...');
             }

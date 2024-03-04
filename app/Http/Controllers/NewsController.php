@@ -20,9 +20,9 @@ class NewsController extends Controller
     public function index(Request $request): JsonResponse
     {
 
-        return response()->json([
-            'data' => $this->service->getAll($request->all()),
-        ], Response::HTTP_OK
+        return response()->json(
+            ['data' => $this->service->getAll($request->all())],
+            Response::HTTP_OK
         );
     }
 
@@ -31,7 +31,10 @@ class NewsController extends Controller
         try {
             $new = $this->service->getById($id);
 
-            return response()->json(['data' => $new], Response::HTTP_OK);
+            return response()->json(
+                ['data' => $new],
+                Response::HTTP_OK
+            );
         } catch (Throwable $throwable) {
             $this->badRequestResponse($throwable);
         }

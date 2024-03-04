@@ -1,6 +1,10 @@
-## 1.1.1 (2024-02-29)
+## 1.1.4 (2024-03-03)
 
-* 
+* adicionando e finalizando os testes end-2-end e unit
+
+## 1.1.2 (2024-03-02)
+
+* criando e finalizando o front
 
 ## 1.1.1 (2024-02-29)
 
